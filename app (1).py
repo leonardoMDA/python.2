@@ -5,11 +5,13 @@ restaurantes = [{'nome':'restaurante','categoria':'alimento','ativo':False},
                 {'nome':'CWB','categoria':'Sushi','ativo':False}]
 
 def exibir_nome_do_programa():
- '''esaa função é responsavel por dar nome ao programa e algumas opções, como dar nome ao restaurantes, listar e sair
+ '''essa função é responsavel por dar nome ao programa
  '''
  print("""Sabor MDA(melhores da atualidade)
 """)
 def exibir_opcoes():
+ '''essa função é responsavel por cadastrar, listar e ativar os restaurantes, e também sair
+ '''
  print('1. Cadastrar restaurante')
  print('2. Listar restaurante')
  print('3. Ativar restaurante')
