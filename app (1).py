@@ -2,9 +2,11 @@ import os
 
 restaurantes = [{'nome':'restaurante','categoria':'alimento','ativo':False},
                 {'nome':'Santa','categoria':'carne','ativo':True},
-                {'nome';'CWB','categoria':'Sushi','ativo':False}]
+                {'nome':'CWB','categoria':'Sushi','ativo':False}]
 
 def exibir_nome_do_programa():
+ '''esaa função é responsavel por dar nome ao programa e algumas opções, como dar nome ao restaurantes, listar e sair
+ '''
  print("""Sabor MDA(melhores da atualidade)
 """)
 def exibir_opcoes():
@@ -14,17 +16,25 @@ def exibir_opcoes():
  print('4. Sair')
 
 def finaliza_app():
+   '''essa função é responsavel por finalizar o aplicativo
+   '''
    exibir_subtitulo('Finalizar App')
 
 def voltar_ao_menu_principal():
+      '''essa função é responavel por voltar ao menu principal
+      '''
       input('\n Digite a tecla "Enter" para voltar ao menu principal')
       main()
 
 def opcao_invalida():
+      '''essa função é responsavel por invalidar a opção 
+      '''
       print('Opção inválida!\n')
       voltar_ao_menu_principal()
 
 def exibir_subtitulo(texto):
+    ''' essa função é responavel por limpar o programa
+    '''
     os.system('clear') #os.system('clear')
     linha = '*' * (len(texto))
     print(linha)
@@ -33,6 +43,13 @@ def exibir_subtitulo(texto):
     print()
 
 def cadastrar_novo_restaurante():
+   ''' essa função é responsavel por cadastrar um novo restaurante
+   -input
+   -nomerestaurante
+   -categoria
+   output:
+   -adicionar um novo restaurante a lista de restaurantes
+   '''
    exibir_subtitulo('Cadastro do novo restaurante:')
    nome_do_restaurante = input('Digite o nome do novo restaurante')
    categoria = input(f'Digite a categoria do resturante {nome_do_restaurante}:')
@@ -42,6 +59,8 @@ def cadastrar_novo_restaurante():
    voltar_ao_menu_principal()
 
 def listar_restaurante():
+    '''essa função é responavel por listar os restaurantes
+    '''
     exibir_subtitulo('Listando os restaurantes')
     
     print(f'{"Nome do restaurante".ljust(22)} | {"Categoria".ljust(20)} | Status')
@@ -53,6 +72,8 @@ def listar_restaurante():
 
     voltar_ao_menu_principal()
 def escolher_opcao():
+ ''' essa função é responsavel por escolher as opções
+ '''
  try:
    opcao_escolhida = int(input('Escolha uma opção: '))
 
@@ -70,6 +91,7 @@ def escolher_opcao():
        opcao_invalida()
 
 def main():
+       '''esa função é responsavel por ser o menu principal'''
        os.system('clear')
        exibir_nome_do_programa()
        exibir_opcoes()
